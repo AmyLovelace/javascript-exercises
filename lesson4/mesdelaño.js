@@ -13,6 +13,6 @@ else if (mes == 6 || mes==7|| mes == 8){
 else if (mes == 9|| mes == 10 || mes == 11){
 
     estacion="primavera";
-
 }
+
 console.log(estacion);
