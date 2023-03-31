@@ -1,4 +1,4 @@
-let numero = 2;
+let numero = 5;
 
 if (numero ==1){
     console.log("Número uno");
