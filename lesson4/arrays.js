@@ -4,7 +4,7 @@
 const autos = ['BMW','Mercedes Benz','Volvo'];
 console.log(autos);
 
-
+autos[2]
 
 
 
