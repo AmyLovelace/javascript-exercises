@@ -1,4 +1,4 @@
-
+//los tipos primitivos no contienen atributos ni metodos y por lo tanto solo tiene un valor individual 
 let persona = {
     nombre : 'Ami',
     apellido: 'Lovelace',
