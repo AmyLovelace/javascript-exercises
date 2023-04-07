@@ -18,7 +18,10 @@ console.log(persona.nombreCompleto())
 let persona2 = new Object();
 persona2.nombre = 'Adel';
 persona2.apellido = 'Cabrera';
+persona2.tel = '22223333'
 console.log(persona2)
+
+
 
 
 
