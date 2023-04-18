@@ -23,6 +23,13 @@ persona2.tel = '22223333'
 console.log(persona2)
 
 
+let persona3 = new Object();
+persona3.nombre ='katiuska';
+persona3.apellido = 'molotov';
+persona3.direccion ='las encinas 930';
+persona3.edad ='3 años';
+
+console.log(persona3)
 
 
 
