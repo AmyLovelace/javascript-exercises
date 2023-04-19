@@ -12,6 +12,7 @@ michis.prototype.tel = '44223311'
 
 
 let katiuska = new michis('katiuska', 'molotov', 'dissapear');
+katiuska.tel= '11223344'
 console.log(katiuska.tel,katiuska)
 
 let copito = new michis ('copito', 'armando','8 lifes left');
