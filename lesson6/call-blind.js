@@ -1,8 +1,8 @@
 let michi1 = {
     nombre : 'katiuska',
     apellido : 'molotov',
-    nombreCompleto : function(){
-        return this.nombre + ' ' + this.apellido;
+    nombreCompleto : function(titulo, tel){
+        return titulo + ': ' + this.nombre + ' ' + this.apellido + ', ' + tel ;
     }
 }
 
@@ -11,4 +11,4 @@ let michi2 ={
     apellido:'armando',
 }
 
-console.log(michi1.nombreCompleto.call(michi2))
+console.log(michi1.nombreCompleto.call(michi2 , 'adicto al churu', 6666666666))
