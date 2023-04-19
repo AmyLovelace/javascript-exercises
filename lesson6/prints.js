@@ -9,5 +9,24 @@ let persona = {
     }
 }
 
-persona.tel ='55555555';
-persona.tel ='55558555';
+console.log(persona);
+
+//concatenar cada valor de cada propiedad
+
+console.log(persona.nombre + ', ' + persona.apellido);
+
+//for in
+
+for (nombrePropiedad in persona ){
+    console.log(persona[nombrePropiedad]);
+}
+
+//object values (lo devuelve como un array)
+
+let personaArray = Object.values(persona);
+console.log(personaArray);
+
+//json.stringify
+
+let personaString = JSON.stringify(persona);
+console.log(personaString)
