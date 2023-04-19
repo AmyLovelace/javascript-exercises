@@ -10,5 +10,5 @@ let michi2 ={
     nombre:'copin',
     apellido:'armando',
 }
-console.log(michi1.nombreCompleto( 'callejera', 6666666666))
+console.log(michi1.nombreCompleto( 'callejera', 6668666666))
 console.log(michi1.nombreCompleto.call(michi2 , 'adicto al churu', 6666666666))
