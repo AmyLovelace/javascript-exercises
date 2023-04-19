@@ -34,22 +34,6 @@ console.log(persona3)
 console.log(persona3['apellido'])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for(propiedad in persona2 ){
+ console.log(propiedad)   
+}
