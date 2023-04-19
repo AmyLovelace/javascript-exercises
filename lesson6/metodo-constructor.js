@@ -1,17 +1,14 @@
-let bichito = {
-    nombre : 'froper',
-    apellido :'pupo',
-    status : 'alive',
-    idioma :'es',
-    get lang (){
-        return this.idioma.toUpperCase();
-    },
-    set lang(lang){
-        this.idioma = lang.toUpperCase();
-    },
+//funcion constructor de objetos de tipo bichito
+function bichito(nombre , apellido,email){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
 
-
-    get nombreCompleto () {
-        return  this.nombre + ' ' + this.apellido ;
-    }
 }
+
+let insecto = new bichito('bichicio','tarantulo', 'btaran@gmail.com');
+console.log(insecto);
+
+
+let cucaracha = new bichito ('rachel', 'roach', 'rroach@gmail.com');
+console.log(cucaracha);
