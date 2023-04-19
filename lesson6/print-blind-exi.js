@@ -8,3 +8,9 @@ let michito ={
 for(propiedadMichito in michito){
     console.log(michito[propiedadMichito])
 }
+
+//json stringify
+
+let michitoString = JSON.stringify(michito);
+
+console.log(michitoString)
