@@ -9,6 +9,9 @@ let persona = {
     }
 }
 
-persona.tel ='55555555'
-persona.tel ='55558555'
+persona.tel ='55555555';
+persona.tel ='55558555';
+
+console.log(persona)
+delete persona.tel;
 console.log(persona)
