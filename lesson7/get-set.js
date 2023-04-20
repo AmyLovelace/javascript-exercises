@@ -1,3 +1,11 @@
+
+//no se puede crear objetos antes de declarar la clase 
+//no se aplica el conceto de hoisting
+
+let micha2 = new michi ('pupo','íuoo');//not defined
+
+
+
 class michi{
     constructor(nombre,apellido){
         this._nombre = nombre;
