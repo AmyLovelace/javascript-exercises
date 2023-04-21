@@ -1,8 +1,14 @@
 
 class Michi{
+
+    static contadorObjetosMichi = 0;
+
     constructor(nombre,apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        Michi.contadorObjetosMichi++;
+        console.log('se incrementan michis')
+
     }
     get nombre(){
         return this._nombre;
@@ -46,6 +52,9 @@ class Empleado extends Michi{
 let micha = new Michi('Katiuska', 'Molotov');
 console.log(micha);//get nombre
 
+let micha2 = new Michi('copin', 'bombin');
+console.log(micha2);
+
 let Empleada = new Empleado('Ami','Cabrera','IT');
 console.log(Empleada);
 console.log(Empleada.nombre);
@@ -54,3 +63,7 @@ console.log(Empleada.nombre);
 
 Michi.saludar();
 Michi.saludar2(micha);
+
+console.log(Michi.contadorObjetosMichi);
+
+console.log(Empleado.contadorObjetosMichi)
