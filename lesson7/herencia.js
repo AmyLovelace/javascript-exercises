@@ -19,6 +19,13 @@ class Michi{
     set apellido(apellido){
         this._apellido = apellido;
     }
+
+    static saludar(){
+        console.log('saludos desde el metodo static');
+    }
+    static saludar2(micha){
+        console.log(micha.nombre);
+    }
 }
 
 class Empleado extends Michi{
@@ -42,3 +49,8 @@ console.log(micha);//get nombre
 let Empleada = new Empleado('Ami','Cabrera','IT');
 console.log(Empleada);
 console.log(Empleada.nombre);
+
+//micha.saludar(); no es posible llamar un objeto static desde un objeto si desde una clase
+
+Michi.saludar();
+Michi.saludar2(micha);
