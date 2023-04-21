@@ -1,7 +1,9 @@
 
 class Michi{
 
-    static contadorObjetosMichi = 0;
+    static contadorObjetosMichi = 0;//atributo de nuestra clase
+
+    email ='Valor default email'; //atributo de nuestros objetos 
 
     constructor(nombre,apellido){
         this._nombre = nombre;
@@ -67,3 +69,5 @@ Michi.saludar2(micha);
 console.log(Michi.contadorObjetosMichi);
 
 console.log(Empleado.contadorObjetosMichi)
+
+console.log(micha2.email)
