@@ -1,17 +1,16 @@
 
 class Michi{
 
-    static contadorObjetosMichi = 0;//atributo de nuestra clase
+    static contadorMichis = 0;//atributo de nuestra clase
 
     email ='Valor default email'; //atributo de nuestros objetos 
 
     constructor(nombre,apellido){
         this._nombre = nombre;
         this._apellido = apellido;
-        Michi.contadorObjetosMichi++;
-        console.log('se incrementan michis')
-
+        this.idMichi= ++Michi.contadorMichis;
     }
+
     get nombre(){
         return this._nombre;
     }
@@ -27,13 +26,16 @@ class Michi{
     set apellido(apellido){
         this._apellido = apellido;
     }
-
-    static saludar(){
-        console.log('saludos desde el metodo static');
+    nombreCompleto(){
+        return this.idMichi + ' ' + this._nombre + ' ' + this._apellido;
     }
-    static saludar2(micha){
-        console.log(micha.nombre);
+    //sobreescribiendo el metodo de la clase padre (object)
+    toString(){
+        //se aplica polimorfismo(multiples formas en tiempo de ejecucion)
+        //el metodo que se ejecuta depende si es una referencia de tipo padre o hijo
+        return this.nombreCompleto();
     }
+    
 }
 
 class Empleado extends Michi{
@@ -49,25 +51,18 @@ class Empleado extends Michi{
     set departamento(departamento){
         this._departamento = departamento;
     }
+     //Sobreescritura
+     nombreCompleto(){
+        return super.nombreCompleto() + ', ' + this._departamento;
+    }
 }
 
 let micha = new Michi('Katiuska', 'Molotov');
-console.log(micha);//get nombre
+console.log(micha.toString());//get nombre
 
 let micha2 = new Michi('copin', 'bombin');
-console.log(micha2);
+console.log(micha2.toString());
 
 let Empleada = new Empleado('Ami','Cabrera','IT');
-console.log(Empleada);
-console.log(Empleada.nombre);
-
-//micha.saludar(); no es posible llamar un objeto static desde un objeto si desde una clase
-
-Michi.saludar();
-Michi.saludar2(micha);
-
-console.log(Michi.contadorObjetosMichi);
-
-console.log(Empleado.contadorObjetosMichi)
-
-console.log(micha2.email)
+console.log(Empleada.toString());
+console.log(Michi.contadorMichis);
