@@ -45,29 +45,6 @@ class Persona{
 
 
 
-class Cliente extends Persona{
-    static contadorCliente = 0;
-    
-    constructor(nombre,apellido,edad,fecha){
-        super(nombre,apellido,edad);
-        this._fecha = fecha;
-        this._idCliente = ++this.contadorCliente; 
-    }
-
-    get idCliente(){
-        return this._idCliente;
-    }
-
-    get fecha(){
-        return
-
-    }
-    set fecha(Date){
-        this._fecha=Date;
-    }
-
-
-}
  
 
 
