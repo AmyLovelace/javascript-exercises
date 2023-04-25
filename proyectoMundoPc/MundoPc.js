@@ -85,17 +85,36 @@ class Computadora{
 
     static contadorComputadoras= 0 ;
 
-    constructor(nombre,Raton,Teclado,Monitor){
+    constructor(nombre,monitor,raton,teclado,){
 
         this._idComputadora = ++Computadora.contadorComputadoras;
         this._nombre = nombre;
-        this._Raton =  Raton.toString();
+        this._monitor =monitor;
+        this._raton =  raton;
+        this._teclado = teclado;
 
+    }
+    toString(){
+        return `Computadora: ${this._idComputadora}: ${this._nombre}\n ${this._monitor} \n ${this._raton} \n ${this._teclado} `;
     }
 
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+let raton1 = new Raton('BT','LG');
+let raton2 = new Raton('USB','CASIO');
 
 let teclado1 = new Teclado('bt','msi');
 let teclado2 = new Teclado('usb','acer');
@@ -103,12 +122,17 @@ let teclado2 = new Teclado('usb','acer');
 console.log(teclado1.toString());
 console.log(teclado2.toString());
 
-let monitor1 = new Monitor('bt','azure');
-let monitor2 = new Monitor('usb','toyotomi');
+let monitor1 = new Monitor('bt',15);
+let monitor2 = new Monitor('usb',21);
 
 console.log(monitor1.toString());
 console.log(monitor2.toString());
 
+let computadora1 = new Computadora('HP',monitor1,teclado1,raton1);
+let computadora2 = new Computadora('ACER',monitor2,teclado2,raton2);
+
+console.log(computadora1.toString());
+console.log(computadora2.toString());
 
 
 
