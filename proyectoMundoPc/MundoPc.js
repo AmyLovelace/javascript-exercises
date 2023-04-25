@@ -53,7 +53,7 @@ class Teclado extends DispositivoEntrada{
     get _idTeclado(){
         return this._idTeclado;
     }
-    
+
     toString(){
         return `idTeclado: ${this._idTeclado}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca} `;
     }
@@ -95,7 +95,21 @@ class Monitor{
 
 }
 
+class Computadora{
 
+    static contadorComputadoras= 0 ;
+
+    constructor(nombre,Raton,Teclado,Monitor){
+
+        this._idComputadora = ++Computadora.contadorComputadoras;
+        this._nombre = nombre;
+        this._Raton =  Raton.toString();
+
+    }
+
+
+
+}
 
 
 
