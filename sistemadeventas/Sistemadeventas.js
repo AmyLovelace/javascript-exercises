@@ -1,4 +1,6 @@
+//declarar clase
 class Producto{
+
 
     static contadorproductos = 0;
 
