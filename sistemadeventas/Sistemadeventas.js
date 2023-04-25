@@ -31,14 +31,79 @@ class Producto{
     }
 
     toString(){
-        return `idProducto:${this._idproducto}, nombre: ${this._nombre}, precio:$${this._precio} `
+        return `idProducto: ${this._idproducto}, nombre: ${this._nombre}, precio: $${this._precio} `
     }
 }
 
+
+class Orden{
+    static contadorOrdenes = 0;
+
+    static get MAX_PRODUCTOS(){
+        return 5;
+    }
+
+    constructor(){
+
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._productos = [];//asi se entiende que puede recibir elementos en el array vacio
+        this._contadorProductosAgregados = 0;
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarProducto(producto){
+        if(this._productos.length < Orden.MAX_PRODUCTOS){
+            this._productos.push(producto);
+            //this._productos[this._contadorProductosAgregados++] = producto;
+        }
+        else{
+            console.log('no se pueden agregar más productos');
+        }
+
+    }
+
+    calcularTotal(){
+        let totalVenta = 0;
+        for(let producto of this._productos){
+            totalVenta += producto.precio;     // totalVenta = totalVenta + producto.precio
+        }
+        return totalVenta;
+    }
+
+    mostrarOrden(){
+        let productosOrden = ' ';
+        for (let producto of this._productos){
+            productosOrden +='\n{' + producto.toString() + '} ';
+        }
+
+        console.log(`Orden: ${this.idOrden} Total: ${this.calcularTotal()}, Productos : ${productosOrden}`);
+    }
+}
+
+
+
+
+
 let producto1 = new Producto('Carne de soya', 2500);
 let producto2 = new Producto('Tofu', 4500);
-console.log(producto1.toString());
-console.log(producto2.toString());
+
+let orden1 = new Orden();
+orden1.agregarProducto(producto1);
+orden1.agregarProducto(producto2);
+orden1.mostrarOrden();
+
+let orden2 = new Orden();
+let producto3 = new Producto('gluten',4600);
+let producto4 = new Producto('leche de soya',1490);
+orden2.agregarProducto(producto1);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto3);
+orden2.agregarProducto(producto4);
+orden2.mostrarOrden();
+
 
 
 
