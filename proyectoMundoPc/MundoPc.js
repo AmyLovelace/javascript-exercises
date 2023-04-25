@@ -71,25 +71,9 @@ class Monitor{
     }
 
     get idMonitor(){
-        return this.idMonitor;
+        return this._idMonitor;
     }
     
-    get marca(){
-        return this._marca;
-    }
-
-    set marca(marca){
-        this._marca = marca;
-    }
-
-    get tamaño(){
-        return this._tamaño;
-    }
-
-    set tamaño(tamaño){
-        this._tamaño = tamaño;
-    }
-
     toString(){
         return `idMonitor: ${this._idMonitor}, marca: ${this._marca}, tamaño: ${this._tamaño} `;
     }
@@ -110,7 +94,6 @@ class Computadora{
     }
 
 
-
 }
 
 
@@ -119,6 +102,12 @@ let teclado2 = new Teclado('usb','acer');
 
 console.log(teclado1.toString());
 console.log(teclado2.toString());
+
+let monitor1 = new Monitor('bt','azure');
+let monitor2 = new Monitor('usb','toyotomi');
+
+console.log(monitor1.toString());
+console.log(monitor2.toString());
 
 
 
