@@ -131,8 +131,8 @@ console.log(monitor2.toString());
 let computadora1 = new Computadora('HP',monitor1,teclado1,raton1);
 let computadora2 = new Computadora('ACER',monitor2,teclado2,raton2);
 
-console.log(computadora1.toString());
-console.log(computadora2.toString());
+console.log(`${computadora1}`);
+console.log(`${computadora2}`);
 
 
 
