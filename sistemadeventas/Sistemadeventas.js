@@ -104,7 +104,15 @@ orden2.agregarProducto(producto3);
 orden2.agregarProducto(producto4);
 orden2.mostrarOrden();
 
-
+let orden3 = new Orden();
+let producto5 =new Producto('queso crema', 2500);
+let producto6 =new Producto('not burger', 5500);
+orden3.agregarProducto(producto1);
+orden3.agregarProducto(producto2);
+orden3.agregarProducto(producto5);
+orden3.agregarProducto(producto6);
+orden3.agregarProducto(producto4);
+orden3.mostrarOrden();
 
 
 
