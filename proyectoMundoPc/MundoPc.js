@@ -169,5 +169,12 @@ orden1.agregarComputadora(computadora2);
 orden1.agregarComputadora(computadora2);
 orden1.mostrarOrden();
 
+let orden2= new Orden();
+orden2.agregarComputadora(computadora1);
+orden2.agregarComputadora(computadora1);
+orden2.agregarComputadora(computadora2);
+orden2.mostrarOrden();
+
+
 
 
