@@ -98,6 +98,35 @@ class Computadora{
         return `Computadora: ${this._idComputadora}: ${this._nombre}\n ${this._monitor} \n ${this._raton} \n ${this._teclado} `;
     }
 
+}
+//clase independiente con relacion de agregacion con la clase computadora
+class Orden{
+    static contadorOrdenes = 0;
+
+    constructor(){
+        this._idOrden = ++ Orden.contadorOrdenes;
+        this._computadoras = [];//array vacio
+
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarComputadora(computadora){
+        this._computadoras.push(computadora); //con el operador push le agregamo sun nuevo indice a nuestro orden
+
+    }
+
+    mostrarOrden(){
+        let computadorasOrden = '';
+        for(let computadora of this._computadoras){
+            computadorasOrden+= `\n ${computadora}`
+        }
+        console.log(`Orden:${this._idOrden},Computadoras:${computadorasOrden}`);
+
+    }
+
 
 }
 
@@ -133,6 +162,12 @@ let computadora2 = new Computadora('ACER',monitor2,teclado2,raton2);
 
 console.log(`${computadora1}`);
 console.log(`${computadora2}`);
+
+let orden1= new Orden();
+orden1.agregarComputadora(computadora1);
+orden1.agregarComputadora(computadora2);
+orden1.agregarComputadora(computadora2);
+orden1.mostrarOrden();
 
 
 
