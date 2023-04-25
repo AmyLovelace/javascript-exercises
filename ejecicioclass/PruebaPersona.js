@@ -112,7 +112,13 @@ let persona2= new Persona('Tomi','Cabrera',31);
 console.log(persona2.toString());
 
 let Empleado1 = new Empleado('Ada','Lovelace','48',20000);
-console.log(Empleado1.toString())
+console.log(Empleado1.toString());
 
 let Empleado2 = new Empleado('Inay','Craft','8',10000);
-console.log(Empleado2.toString())
+console.log(Empleado2.toString());
+
+let cliente1 = new Cliente('copo','cabrera',4,new Date());
+console.log(cliente1.toString());
+
+let cliente2 = new Cliente('chechi','calle',3,new Date());
+console.log(cliente2.toString());
