@@ -51,7 +51,7 @@ class Teclado extends DispositivoEntrada{
         this._idTeclado = ++Teclado.contadorTeclados;
     }
 
-    get _idTeclado(){
+    get idTeclado(){
         return this._idTeclado;
     }
 
@@ -59,6 +59,7 @@ class Teclado extends DispositivoEntrada{
         return `idTeclado: ${this._idTeclado}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca} `;
     }
 }
+
 
 class Monitor{
     static contadorMonitores = 0;
@@ -113,7 +114,11 @@ class Computadora{
 }
 
 
+let teclado1 = new Teclado('bt','msi');
+let teclado2 = new Teclado('usb','acer');
 
+console.log(teclado1.toString());
+console.log(teclado2.toString());
 
 
 
