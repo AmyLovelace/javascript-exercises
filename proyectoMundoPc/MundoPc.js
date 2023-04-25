@@ -23,7 +23,7 @@ class DispositivoEntrada{
 }
 
 class Raton extends DispositivoEntrada{
-    
+
     static contadorRatones = 0;
 
     constructor(tipoEntrada,marca){
@@ -40,6 +40,7 @@ class Raton extends DispositivoEntrada{
         return `idRaton: ${this._idRaton}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca} `;
     }
 }
+
 
 class Teclado extends DispositivoEntrada{
     
