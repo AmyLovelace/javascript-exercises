@@ -18,7 +18,7 @@ class Persona{
         this._nombre = nombre;
     }
     get edad(){
-        return this._edad
+        return this._edad;
     }
     set edad (edad){
         this._edad = edad;
@@ -40,22 +40,36 @@ class Estudiante extends Persona{
         return `${super.presentarse()}y estoy estudiando ${this.curso}.`
     }
 
-
-
 }
-class Estudiante extends Persona{
-    constructor(nombre,edad,curso){
+
+// La subclase Profesor debe tener una propiedad adicional "materia" y un método "enseñar()" que muestre por consola 
+// el mensaje "Estoy enseñando [materia]".
+
+class Profesor extends Persona{
+    constructor(nombre,edad,materia){
         super(nombre,edad);
-        this.curso = curso;
+        this._materia = materia;
     }
-    
-    estudiar(){
-        return `${super.presentarse()}y estoy estudiando ${this.curso}.`
+    get materia(){
+        return this._materia;
+    }
+    set materia (materia){
+        this._materia = materia;
+    }
+    enseñar(){
+        return `${super.presentarse()} y sor profesor/a de ${this._materia}`
     }
 
 
 
 }
 
-let estudiante1 = new Estudiante('Ami', 28, 'Desarrollo Web')
-console.log(estudiante1.estudiar())
+
+
+
+
+let estudiante1 = new Estudiante('Ami', 28, 'Desarrollo Web');
+console.log(estudiante1.estudiar());
+
+let profesor1 = new Profesor('Adel', 36, 'la bida');
+console.log(profesor1.enseñar());
