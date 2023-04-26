@@ -22,6 +22,14 @@ class Gerente extends Empleado{
 
 }
 
+function imprimir(tipo){//se crea polimorfismo porque se puede utilizar
+   console.log( tipo.obtenerDetalles());
+}
+
+
+let empleado1 = new Empleado('Ami',45000);
 let gerente1 = new Gerente ('Adel', 60000, 'IT');
-console.log(gerente1.obtenerDetalles())
+
+imprimir(gerente1);
+imprimir(empleado1);
 
