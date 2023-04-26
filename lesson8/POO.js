@@ -24,3 +24,4 @@ class Gerente extends Empleado{
 
 let gerente1 = new Gerente ('Adel', 60000, 'IT');
 console.log(gerente1.obtenerDetalles())
+
