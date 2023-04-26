@@ -74,7 +74,6 @@ class Gato extends Animal{
 }
 
 
-
 let perro1 = new Perro('Pug','omnivoro');
 console.log(perro1.toString())
 
