@@ -7,12 +7,25 @@
 
 class Persona{
     constructor(nombre,edad){
-        this.nombre = nombre;
-        this.edad = edad ;
+        this._nombre = nombre;
+        this._edad = edad ;
+    }
+    get nombre(){
+        return this._nombre;
+    }
+
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+    get edad(){
+        return this._edad
+    }
+    set edad (edad){
+        this._edad = edad;
     }
     
     presentarse(){
-        return `Hola! mi nombre es ${this.nombre} , tengo ${this.edad} años de edad `
+        return `Hola! mi nombre es ${this._nombre}, tengo ${this._edad} años de edad `
     }
 
 }
@@ -24,7 +37,20 @@ class Estudiante extends Persona{
     }
     
     estudiar(){
-        return `${super.presentarse} y estoy estudiando ${this.curso}.`
+        return `${super.presentarse()}y estoy estudiando ${this.curso}.`
+    }
+
+
+
+}
+class Estudiante extends Persona{
+    constructor(nombre,edad,curso){
+        super(nombre,edad);
+        this.curso = curso;
+    }
+    
+    estudiar(){
+        return `${super.presentarse()}y estoy estudiando ${this.curso}.`
     }
 
 
