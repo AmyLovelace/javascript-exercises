@@ -5,7 +5,7 @@
 try{
     
     //x = 10;
-    mifuncion()
+    mifuncion();
 }
 //utilizamos el catch para "capturar"el error y lo utilizamos en el parametro de la variable catch 
 //la mandamos a imprimir , nos devuelve el error y logramos que siga leyendo el programa. 
@@ -13,6 +13,10 @@ try{
 catch(error){
     console.log(error);
 
+}
+//podemos agregar el bloque FINALLY que siempre se ejecutara independiente que haya dentro del TRY
+finally{
+    console.log('termina la revisión de errores');
 }
 
 console.log('continuamos..')
