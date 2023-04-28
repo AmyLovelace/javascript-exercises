@@ -1,6 +1,6 @@
 'use strict'
 
-let resultado = '';
+let resultado = '1';
 
 try{
     //x = 10;
