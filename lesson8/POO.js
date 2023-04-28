@@ -22,14 +22,16 @@ class Gerente extends Empleado{
 
 }
 
-function imprimir(tipo){//se crea polimorfismo porque se puede utilizar
+function determinarTipo(tipo){//se crea polimorfismo porque se puede utilizar
    
     console.log( tipo.obtenerDetalles());
     if(tipo instanceof Gerente){
         console.log('es un objeto de tipo Gerente')
+        console.log(tipo.departamento)
     }
-    if (tipo instanceof Empleado){
+    else if (tipo instanceof Empleado){
         console.log('es un objeto de tipo Empleado')
+        console.log(tipo.departamento)
     }
 }
 
@@ -37,6 +39,6 @@ function imprimir(tipo){//se crea polimorfismo porque se puede utilizar
 let empleado1 = new Empleado('Ami',45000);
 let gerente1 = new Gerente ('Adel', 60000, 'IT');
 
-imprimir(gerente1);
-imprimir(empleado1);
+determinarTipo(gerente1);
+determinarTipo(empleado1);
 
