@@ -27,15 +27,23 @@ const regresaObjeto = () => ({nombre:'Ami', apellido:'Cabrera'});
 console.log(regresaObjeto())
 
 const funcionConParametrosClasico = function(mensaje){
-    mensaje = 'saludar desde mi funcion clasica'
-    console.log(mensaje)
+    mensaje = 'saludar desde mi funcion clasica';
+    console.log(mensaje);
     
 }
-funcionConParametrosClasico()
+funcionConParametrosClasico();
 
 
 const funcionConParametros = (mensaje) => console.log (mensaje);
 funcionConParametros('saludos con parametros');
+
+//funcion con vario parametros
+
+const funcionConMasParametros =  (op1,op2) => { 
+    let resultado = op1 + op2 
+    return `Resultado: ${resultado}`;
+};
+console.log(funcionConMasParametros(3,2));
 
 
 
