@@ -7,7 +7,10 @@ let miPromesa = new Promise((resolved,rejected) => {//la promesa recibe dos para
         rejected('se produjo un error');
 });
 
-miPromesa.then(valor => console.log(valor), error => console.log(error));
+//miPromesa.then(valor => console.log(valor), error => console.log(error));
+miPromesa
+.then(valor => console.log(valor))
+.catch(error => console.log(error));
 
 
 
